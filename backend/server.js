@@ -19,7 +19,12 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:3001",
+      "http://localhost:5173",
+      "https://jeeva-grid.vercel.app",
+    ],
     credentials: true,
   }),
 );

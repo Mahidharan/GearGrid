@@ -40,8 +40,9 @@ A full-stack MERN application for car parts e-commerce with dual login support f
 - Node.js
 - Express.js
 - MongoDB with Mongoose
-- JWT for authentication
+- JWT for authentication (httpOnly cookies)
 - bcryptjs for password hashing
+- cookie-parser for cookie handling
 
 ### Frontend
 
@@ -50,6 +51,7 @@ A full-stack MERN application for car parts e-commerce with dual login support f
 - React Router v6
 - Axios for API calls
 - Context API for state management
+- Tailwind CSS for styling
 
 ## Project Structure
 
@@ -63,6 +65,8 @@ GearGrid/
 │   │   ├── orderController.js
 │   │   ├── productController.js
 │   │   └── reminderController.js
+│   ├── data/
+│   │   └── products.js
 │   ├── middleware/
 │   │   └── auth.js
 │   ├── models/
@@ -82,7 +86,7 @@ GearGrid/
     ├── src/
     │   ├── components/
     │   │   ├── Navbar.jsx
-    │   │   ├── Navbar.css
+    │   │   ├── LoadingSpinner.jsx
     │   │   └── ProtectedRoute.jsx
     │   ├── context/
     │   │   └── AuthContext.jsx
@@ -94,8 +98,7 @@ GearGrid/
     │   │   ├── OrderHistoryPage.jsx
     │   │   ├── ProductDetailsPage.jsx
     │   │   ├── ProductListPage.jsx
-    │   │   ├── RegisterPage.jsx
-    │   │   └── [CSS files]
+    │   │   └── RegisterPage.jsx
     │   ├── services/
     │   │   ├── authService.js
     │   │   ├── orderService.js
@@ -104,8 +107,13 @@ GearGrid/
     │   ├── App.jsx
     │   ├── main.jsx
     │   └── index.css
+    ├── public/
+    │   └── geargridlogo.png
+    ├── .env.example
+    ├── .env.production
     ├── index.html
     ├── package.json
+    ├── tailwind.config.js
     └── vite.config.js
 ```
 
@@ -132,20 +140,28 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in the backend directory:
+Create a `.env` file in the backend directory (see `.env.example` for reference):
 
 ```env
-PORT=5000
+PORT=8000
 MONGODB_URI=mongodb://localhost:27017/geargrid
 JWT_SECRET=your_secure_jwt_secret_key_here
 NODE_ENV=development
 ```
+
+For production (Render), set these environment variables in your deployment platform.
 
 #### 3. Frontend Setup
 
 ```bash
 cd ../frontend
 npm install
+```
+
+For local development, the Vite proxy will handle API calls. For production, create a `.env.production` file:
+
+```env
+VITE_API_URL=https://geargrid.onrender.com
 ```
 
 ### Running the Application
@@ -159,7 +175,7 @@ Make sure MongoDB is running on your machine or you have a MongoDB Atlas connect
 ```bash
 cd backend
 npm run dev
-# Server runs on http://localhost:5000
+# Server runs on http://localhost:8000
 ```
 
 #### Start Frontend Development Server
@@ -167,8 +183,36 @@ npm run dev
 ```bash
 cd frontend
 npm run dev
-# Frontend runs on http://localhost:3000
+# Frontend runs on http://localhost:5173
 ```
+
+## Deployment
+
+### Production URLs
+
+- Frontend: https://jeeva-grid.vercel.app
+- Backend API: https://geargrid.onrender.com
+
+### Backend Deployment (Render)
+
+1. Create a new Web Service on Render
+2. Connect your GitHub repository
+3. Set environment variables:
+   - `PORT=8000`
+   - `MONGODB_URI=your_mongodb_atlas_connection_string`
+   - `JWT_SECRET=your_jwt_secret`
+   - `NODE_ENV=production`
+4. Set build command: `npm install`
+5. Set start command: `node server.js`
+
+### Frontend Deployment (Vercel)
+
+1. Create a new project on Vercel
+2. Connect your GitHub repository
+3. Set root directory to `frontend`
+4. Set environment variable:
+   - `VITE_API_URL=https://geargrid.onrender.com`
+5. Deploy!
 
 ### Seeding Sample Data (Optional)
 
@@ -255,8 +299,11 @@ Mechanics can set up automatic restock reminders for products they order frequen
 - Frontend uses React Context API for authentication state
 - Protected routes redirect unauthorized users to login
 - Role-based route protection ensures mechanics/customers see appropriate pages
-- JWT tokens stored in localStorage
+- JWT tokens stored in httpOnly cookies for enhanced security (not in localStorage)
 - Passwords hashed with bcrypt before storage
+- Loading spinner with gear animation for route transitions
+- Environment-aware API URLs using Vite environment variables
+- CORS configured for both local development and production deployment
 
 ## Future Enhancements
 
