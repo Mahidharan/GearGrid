@@ -44,7 +44,9 @@ const LandingPage = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-primary-600/20 border border-primary-600/30 rounded-full text-primary-400 text-xs sm:text-sm font-semibold mb-6 sm:mb-8 backdrop-blur-sm">
               <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></span>
-              <span className="hidden sm:inline">Trusted by 5,000+ Mechanics & Car Enthusiasts</span>
+              <span className="hidden sm:inline">
+                Trusted by 5,000+ Mechanics & Car Enthusiasts
+              </span>
               <span className="sm:hidden">5,000+ Happy Customers</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 sm:mb-8 text-dark-100 leading-tight px-2">
@@ -100,14 +102,20 @@ const LandingPage = () => {
               <p className="text-dark-300 font-semibold text-sm sm:text-base md:text-lg">
                 Happy Clients
               </p>
-              <p className="text-dark-500 text-xs sm:text-sm mt-1">And Growing</p>
+              <p className="text-dark-500 text-xs sm:text-sm mt-1">
+                And Growing
+              </p>
             </div>
             <div className="bg-gradient-to-br from-dark-800 to-dark-800/50 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-2xl border border-dark-700 text-center hover:border-orange-600/50 transition-all group">
               <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-orange-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
                 24/7
               </div>
-              <p className="text-dark-300 font-semibold text-sm sm:text-base md:text-lg">Support</p>
-              <p className="text-dark-500 text-xs sm:text-sm mt-1">Always Available</p>
+              <p className="text-dark-300 font-semibold text-sm sm:text-base md:text-lg">
+                Support
+              </p>
+              <p className="text-dark-500 text-xs sm:text-sm mt-1">
+                Always Available
+              </p>
             </div>
             <div className="bg-gradient-to-br from-dark-800 to-dark-800/50 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-2xl border border-dark-700 text-center hover:border-purple-600/50 transition-all group">
               <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-400 mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
@@ -116,7 +124,9 @@ const LandingPage = () => {
               <p className="text-dark-300 font-semibold text-sm sm:text-base md:text-lg">
                 Satisfaction
               </p>
-              <p className="text-dark-500 text-xs sm:text-sm mt-1">Customer Rating</p>
+              <p className="text-dark-500 text-xs sm:text-sm mt-1">
+                Customer Rating
+              </p>
             </div>
           </div>
         </div>
@@ -137,7 +147,9 @@ const LandingPage = () => {
             <div className="relative">
               <div className="bg-dark-800 p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl shadow-2xl border border-dark-700 hover:border-primary-600 transition-all text-center group">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-lg group-hover:scale-110 transition-transform">
-                  <span className="text-3xl sm:text-4xl font-bold text-white">1</span>
+                  <span className="text-3xl sm:text-4xl font-bold text-white">
+                    1
+                  </span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-dark-100 mb-3 sm:mb-4">
                   Create Account
@@ -154,7 +166,9 @@ const LandingPage = () => {
             <div className="relative">
               <div className="bg-dark-800 p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl shadow-2xl border border-dark-700 hover:border-primary-600 transition-all text-center group">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary-600 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-lg group-hover:scale-110 transition-transform">
-                  <span className="text-3xl sm:text-4xl font-bold text-white">2</span>
+                  <span className="text-3xl sm:text-4xl font-bold text-white">
+                    2
+                  </span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-dark-100 mb-3 sm:mb-4">
                   Browse Parts
@@ -170,7 +184,9 @@ const LandingPage = () => {
             </div>
             <div className="bg-dark-800 p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl shadow-2xl border border-dark-700 hover:border-primary-600 transition-all text-center group">
               <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto shadow-lg group-hover:scale-110 transition-transform">
-                <span className="text-3xl sm:text-4xl font-bold text-white">3</span>
+                <span className="text-3xl sm:text-4xl font-bold text-white">
+                  3
+                </span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-dark-100 mb-3 sm:mb-4">
                 Order & Deliver
@@ -286,7 +302,9 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="bg-dark-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-2xl border border-dark-700 hover:border-primary-600/50 transition-all">
               <div className="flex items-center gap-1 mb-3 sm:mb-4">
-                <span className="text-yellow-400 text-xl sm:text-2xl">★★★★★</span>
+                <span className="text-yellow-400 text-xl sm:text-2xl">
+                  ★★★★★
+                </span>
               </div>
               <p className="text-dark-300 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 leading-relaxed italic">
                 "Best auto parts supplier I've worked with. Wholesale pricing
@@ -297,14 +315,20 @@ const LandingPage = () => {
                   M
                 </div>
                 <div>
-                  <p className="text-dark-100 font-bold text-sm sm:text-base">Vikash</p>
-                  <p className="text-dark-500 text-xs sm:text-sm">Professional Mechanic</p>
+                  <p className="text-dark-100 font-bold text-sm sm:text-base">
+                    Vikash
+                  </p>
+                  <p className="text-dark-500 text-xs sm:text-sm">
+                    Professional Mechanic
+                  </p>
                 </div>
               </div>
             </div>
             <div className="bg-dark-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-2xl border border-dark-700 hover:border-primary-600/50 transition-all">
               <div className="flex items-center gap-1 mb-3 sm:mb-4">
-                <span className="text-yellow-400 text-xl sm:text-2xl">★★★★★</span>
+                <span className="text-yellow-400 text-xl sm:text-2xl">
+                  ★★★★★
+                </span>
               </div>
               <p className="text-dark-300 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 leading-relaxed italic">
                 "Fast shipping, great prices, and quality parts. Fixed my car
@@ -315,14 +339,20 @@ const LandingPage = () => {
                   S
                 </div>
                 <div>
-                  <p className="text-dark-100 font-bold text-sm sm:text-base">Mathan Kumar</p>
-                  <p className="text-dark-500 text-xs sm:text-sm">Car Enthusiast</p>
+                  <p className="text-dark-100 font-bold text-sm sm:text-base">
+                    Mathan Kumar
+                  </p>
+                  <p className="text-dark-500 text-xs sm:text-sm">
+                    Car Enthusiast
+                  </p>
                 </div>
               </div>
             </div>
             <div className="bg-dark-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-2xl border border-dark-700 hover:border-primary-600/50 transition-all">
               <div className="flex items-center gap-1 mb-3 sm:mb-4">
-                <span className="text-yellow-400 text-xl sm:text-2xl">★★★★★</span>
+                <span className="text-yellow-400 text-xl sm:text-2xl">
+                  ★★★★★
+                </span>
               </div>
               <p className="text-dark-300 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 leading-relaxed italic">
                 "The restock reminder feature is a game-changer. Never run out
@@ -333,8 +363,12 @@ const LandingPage = () => {
                   D
                 </div>
                 <div>
-                  <p className="text-dark-100 font-bold text-sm sm:text-base">Kandasamy</p>
-                  <p className="text-dark-500 text-xs sm:text-sm">Auto Shop Owner</p>
+                  <p className="text-dark-100 font-bold text-sm sm:text-base">
+                    Kandasamy
+                  </p>
+                  <p className="text-dark-500 text-xs sm:text-sm">
+                    Auto Shop Owner
+                  </p>
                 </div>
               </div>
             </div>
@@ -410,7 +444,9 @@ const LandingPage = () => {
               </p>
               <div className="flex items-center justify-center gap-2 text-xs sm:text-sm">
                 <span className="text-dark-600">Built by</span>
-                <span className="text-primary-500 font-semibold">Jeevanantham</span>
+                <span className="text-primary-500 font-semibold">
+                  Jeevanantham
+                </span>
               </div>
             </div>
           </div>
