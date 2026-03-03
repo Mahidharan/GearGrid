@@ -12,17 +12,21 @@ const seedProducts = async () => {
     await connectDB();
     console.log("Connected to MongoDB");
 
+    console.log(`Products to seed: ${products.length}`);
+
     // Clear existing products
     await Product.deleteMany({});
     console.log("✓ Existing products deleted");
 
     // Insert products from data file
-    await Product.insertMany(products);
-    console.log(`✓ Successfully seeded ${products.length} products`);
+    console.log("Inserting products...");
+    const result = await Product.insertMany(products);
+    console.log(`✓ Successfully seeded ${result.length} products`);
 
     process.exit(0);
   } catch (error) {
     console.error("✗ Error seeding products:", error.message);
+    console.error("Full error:", error);
     process.exit(1);
   }
 };

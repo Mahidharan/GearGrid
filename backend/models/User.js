@@ -21,13 +21,13 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["customer", "mechanic"],
+    enum: ["customer", "mechanic", "admin"],
     required: true,
   },
   isVerified: {
     type: Boolean,
     default: function () {
-      return this.role === "customer" ? true : false;
+      return this.role === "customer" || this.role === "admin" ? true : false;
     },
   },
   createdAt: {

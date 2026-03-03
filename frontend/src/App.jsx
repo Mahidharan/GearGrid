@@ -18,6 +18,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CustomerDashboard from "./pages/CustomerDashboard";
 import MechanicDashboard from "./pages/MechanicDashboard";
 import OrderHistoryPage from "./pages/OrderHistoryPage";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function AppRoutes() {
   const location = useLocation();
@@ -68,6 +69,16 @@ function AppRoutes() {
           element={
             <ProtectedRoute allowedRole="mechanic">
               <MechanicDashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Protected Routes - Admin */}
+        <Route
+          path="/admin-dashboard"
+          element={
+            <ProtectedRoute allowedRole="admin">
+              <AdminDashboard />
             </ProtectedRoute>
           }
         />

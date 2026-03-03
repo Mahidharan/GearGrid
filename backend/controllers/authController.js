@@ -21,10 +21,12 @@ export const register = async (req, res) => {
     }
 
     // Check if role is valid
-    if (role !== "customer" && role !== "mechanic") {
+    if (role !== "customer" && role !== "mechanic" && role !== "admin") {
       return res
         .status(400)
-        .json({ message: 'Invalid role. Must be "customer" or "mechanic"' });
+        .json({
+          message: 'Invalid role. Must be "customer", "mechanic", or "admin"',
+        });
     }
 
     // Check if user exists

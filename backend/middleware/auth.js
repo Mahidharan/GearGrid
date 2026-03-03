@@ -55,3 +55,12 @@ export const isCustomer = (req, res, next) => {
     res.status(403).json({ message: "Access denied. Customer role required." });
   }
 };
+
+// Middleware to check if user is an admin
+export const isAdmin = (req, res, next) => {
+  if (req.user && req.user.role === "admin") {
+    next();
+  } else {
+    res.status(403).json({ message: "Access denied. Admin role required." });
+  }
+};

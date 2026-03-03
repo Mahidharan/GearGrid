@@ -50,6 +50,8 @@ const RegisterPage = () => {
         navigate("/customer-dashboard");
       } else if (user.role === "mechanic") {
         navigate("/mechanic-dashboard");
+      } else if (user.role === "admin") {
+        navigate("/admin-dashboard");
       }
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed");

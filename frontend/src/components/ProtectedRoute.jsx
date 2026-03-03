@@ -20,6 +20,8 @@ const ProtectedRoute = ({ children, allowedRole }) => {
       return <Navigate to="/customer-dashboard" replace />;
     } else if (user.role === "mechanic") {
       return <Navigate to="/mechanic-dashboard" replace />;
+    } else if (user.role === "admin") {
+      return <Navigate to="/admin-dashboard" replace />;
     }
   }
 

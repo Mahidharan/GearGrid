@@ -19,6 +19,8 @@ const Navbar = () => {
       return "/customer-dashboard";
     } else if (user?.role === "mechanic") {
       return "/mechanic-dashboard";
+    } else if (user?.role === "admin") {
+      return "/admin-dashboard";
     }
     return "/";
   };
@@ -38,9 +40,12 @@ const Navbar = () => {
   };
 
   const getRoleBadgeColor = () => {
-    return user?.role === "mechanic"
-      ? "bg-orange-600/20 text-orange-400 border-orange-600/30"
-      : "bg-blue-600/20 text-blue-400 border-blue-600/30";
+    if (user?.role === "mechanic") {
+      return "bg-orange-600/20 text-orange-400 border-orange-600/30";
+    } else if (user?.role === "admin") {
+      return "bg-red-600/20 text-red-400 border-red-600/30";
+    }
+    return "bg-blue-600/20 text-blue-400 border-blue-600/30";
   };
 
   return (
@@ -155,9 +160,19 @@ const Navbar = () => {
                       {user.name}
                     </span>
                     <span
-                      className={`text-xs font-medium ${user.role === "mechanic" ? "text-orange-400" : "text-blue-400"}`}
+                      className={`text-xs font-medium ${
+                        user.role === "mechanic"
+                          ? "text-orange-400"
+                          : user.role === "admin"
+                            ? "text-red-400"
+                            : "text-blue-400"
+                      }`}
                     >
-                      {user.role === "mechanic" ? "Mechanic Pro" : "Customer"}
+                      {user.role === "mechanic"
+                        ? "Mechanic Pro"
+                        : user.role === "admin"
+                          ? "Administrator"
+                          : "Customer"}
                     </span>
                   </div>
                   {/* Dropdown Arrow */}
